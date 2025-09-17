@@ -1,24 +1,12 @@
 # message_connect
 
 ```
---- stderr: autoware_pose_initializer       
-CMake Warning:
-  Manually-specified variables were not used by the project:
-
-    HUMBLE_ROS
-    ROS_EDITION
-
-
-In file included from /home/user/ros2_ws/src/autoware_core/localization/autoware_pose_initializer/src/pose_initializer_core.cpp:23:
-/home/user/ros2_ws/src/autoware_core/localization/autoware_pose_initializer/src/stop_check_module.hpp:18:10: fatal error: autoware/motion_utils/vehicle/vehicle_state_checker.hpp: No such file or directory
-   18 | #include <autoware/motion_utils/vehicle/vehicle_state_checker.hpp>
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
-gmake[2]: *** [CMakeFiles/autoware_pose_initializer.dir/build.make:76: CMakeFiles/autoware_pose_initializer.dir/src/pose_initializer_core.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:178: CMakeFiles/autoware_pose_initializer.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
----
-Failed   <<< autoware_pose_initializer [13.2s, exited with code 2]
+root@lite3:/home/user/ros2_ws/src/quadruped_bringup/launch# ros2 launch navigation.launch.py 
+[INFO] [launch]: All log files can be found below /root/.ros/log/2025-09-17-08-41-13-582615-lite3-92740
+[INFO] [launch]: Default logging verbosity is set to INFO
+[ERROR] [launch]: Caught exception in launch (see debug for traceback): Caught multiple exceptions when trying to load file of format [py]:
+ - PackageNotFoundError: "package 'quadruped_bringup' not found, searching: ['/home/user/ros2_ws/install/nav2_common', '/home/user/ros2_ws/install/autoware_signal_processing', '/home/user/ros2_ws/install/autoware_component_interface_specs', '/opt/ros/humble']"
+ - InvalidFrontendLaunchFileError: The launch file may have a syntax error, or its format is unknown
 
 
 ```
