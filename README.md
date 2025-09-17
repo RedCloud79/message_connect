@@ -1,8 +1,7 @@
 # message_connect
 
 ```
---- stderr: autoware_motion_utils      
-In this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/autoware_motion_utils` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.
+--- stderr: autoware_pose_initializer       
 CMake Warning:
   Manually-specified variables were not used by the project:
 
@@ -10,21 +9,17 @@ CMake Warning:
     ROS_EDITION
 
 
-/home/user/ros2_ws/src/autoware_core/common/autoware_motion_utils/src/resample/resample.cpp:17:10: fatal error: autoware/interpolation/linear_interpolation.hpp: No such file or directory
-   17 | #include "autoware/interpolation/linear_interpolation.hpp"
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/user/ros2_ws/src/autoware_core/localization/autoware_pose_initializer/src/pose_initializer_core.cpp:23:
+/home/user/ros2_ws/src/autoware_core/localization/autoware_pose_initializer/src/stop_check_module.hpp:18:10: fatal error: autoware/motion_utils/vehicle/vehicle_state_checker.hpp: No such file or directory
+   18 | #include <autoware/motion_utils/vehicle/vehicle_state_checker.hpp>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
-gmake[2]: *** [CMakeFiles/autoware_motion_utils.dir/build.make:118: CMakeFiles/autoware_motion_utils.dir/src/resample/resample.cpp.o] Error 1
-gmake[2]: *** Waiting for unfinished jobs....
-/home/user/ros2_ws/src/autoware_core/common/autoware_motion_utils/src/trajectory/interpolation.cpp:17:10: fatal error: autoware/interpolation/linear_interpolation.hpp: No such file or directory
-   17 | #include "autoware/interpolation/linear_interpolation.hpp"
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
-gmake[2]: *** [CMakeFiles/autoware_motion_utils.dir/build.make:146: CMakeFiles/autoware_motion_utils.dir/src/trajectory/interpolation.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:157: CMakeFiles/autoware_motion_utils.dir/all] Error 2
+gmake[2]: *** [CMakeFiles/autoware_pose_initializer.dir/build.make:76: CMakeFiles/autoware_pose_initializer.dir/src/pose_initializer_core.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:178: CMakeFiles/autoware_pose_initializer.dir/all] Error 2
 gmake: *** [Makefile:146: all] Error 2
 ---
-Failed   <<< autoware_motion_utils [32.7s, exited with code 2]
+Failed   <<< autoware_pose_initializer [13.2s, exited with code 2]
+
 
 ```
 
